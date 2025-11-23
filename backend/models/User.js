@@ -25,6 +25,20 @@ const UserSchema = new mongoose.Schema(
       enum: ["email", "google", "facebook"],
       default: "email",
     },
+    isVerified: {
+    type: Boolean,
+    default: false 
+  },
+  otp: {
+    type: String,
+  },
+  otpExpires: {
+    type: Date,
+  }
+  },
+  { timestamps: true,
+    collection: 'MamaMindSense'
+   }
   },
   { timestamps: true }
 );
